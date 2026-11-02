@@ -21,7 +21,7 @@ export default function SingupPage() {
     if (res.status === 200) {
       const data = await res.json();
       localStorage.setItem("token", data.token);
-      router.push("/ProfilePage");
+      router.push("/shop");
       
     } else if (res.status === 401) {
       setMessage(" Wrong username or password");

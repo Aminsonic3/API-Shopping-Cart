@@ -8,6 +8,7 @@ import type {
   Product,
   ProductsResponse,
 } from "./types";
+import Link from "next/link";
 const API_URL = "https://practice.amirm.me";
 type Filters = {
   sort: string;
@@ -75,7 +76,9 @@ export default function ShopPage() {
   }, [sort, category]);
 
   return (
+    
     <div className="mx-5">
+      
       <select className="bg-black text-amber-50 font-bold border-2  border-amber-400 rounded-b-xl px-3 py-2 my-3" value={sort} onChange={(e) => setSort(e.target.value)}>
         <option className="text-2xl font-bold " value="newest">جدیدترین</option>
         <option className="text-2xl font-bold " value="price">ارزان‌ترین</option>
